@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <style>
+            #bruh{
+                border-radius: 25px;
+                background-color: rgba(0, 255, 157, 0.281);
+                padding: 10px;
+                stroke: rgb(0, 255, 170);
+                padding: 5px;
+                margin: 5px;
+            }
+            .heading{
+                font-family: 'Oswald', sans-serif;
+                padding: 5px ;
+                margin: 5px;
+            }
+
+            #mydiv{
+                padding: 5px;
+                border-radius: 20px;
+                margin: 5px;
+                background-image: linear-gradient(135deg,rgba(255, 123, 0, 0.200),rgba(110, 0, 161, 0.200),rgba(0, 255, 136, 0.200));
+            }
+
+            button{
+                margin: 5px;
+                padding: 5px;
+                border-radius: 25px;
+                color: black;
+                background-color: aquamarine;
+            }
+            
+            #spanner
+            {
+            outline: none;
+            background-color:white;
+            border-radius: 3px;
+            }
+
+            pre{
+                
+            outline: none;
+            user-select:all;
+            background-color:white;
+            border-radius: 3px;
+            padding: 10px;
+            }
+
+            #myDIV{
+  /* border: 5px outset red; */
+  /* background-image: linear-gradient(135deg,#d2f0268c 75% , #da44ab88 50%, #eadedb93 0%); */
+  background-image: linear-gradient(135deg, #eadedb93 0%, #da44ab88 50%, #d2f0268c 75%);
+  padding: 5px;
+  text-align: center;
+  align-items: center;
+  border-radius: 15px;
+  user-select: none;
+  /* width: 1000px;
+  height: 600px; */
+
+  transition-property: all;
+  transition-duration: 2500ms;
+
+}
+        </style>
+        
+    </head>
+    <body>
+        <div id="mydiv">
+            <div id="myDIV">
+                <h1 class="heading" id="h">Enter executable and valid javascript below and hit 'Execute'</h1>
+            </div>
+            <span contenteditable="true" id="spanner"></span>
+            <button onclick="myFunk()">Execute</button>
+        </div>
+        <script>
+            const span = document.getElementById('spanner');
+            span.innerHTML=`
+<pre class='wut'>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+`
+            
+            function myFunk()
+            {
+            //     console.log('hey')
+                var code = document.getElementsByClassName('wut');
+                var Code=" ";
+                for (let p = 0; p < code.length; p++) {
+                    Code = Code.concat(code[p].innerHTML);
+                    
+                }
+                setTimeout(Code,1);
+            }
+        </script>
+    </body>
+</html>
