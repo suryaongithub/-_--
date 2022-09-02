@@ -18,35 +18,44 @@
         .heading {
             font-family: 'Oswald', sans-serif;
             padding: 5px;
+            color:aquamarine;
             margin: 5px;
         }
 
-        #mydiv {
+        
+        body{
+            background-color: rgb(43, 41, 41);
             padding: 5px;
             border-radius: 20px;
-            margin: 5px;
-            background-image: linear-gradient(135deg, rgba(255, 123, 0, 0.200), rgba(110, 0, 161, 0.200), rgba(0, 255, 136, 0.200));
         }
-
         button {
             margin: 5px;
-            padding: 5px;
+            padding: 7px;
             border-radius: 25px;
             color: black;
             background-color: aquamarine;
+            position: fixed;
+            bottom: 0;
+            right:50%;
+            width: 120px;
+            
         }
 
         .myP{
             margin:2px;
             font-family: 'Oswald', sans-serif;
+            color:white
         }
 
         #editingplaygorund{
-            background-color: white;
+            background-color: rgb(46, 54, 51);
             padding: 1px;
             border-radius: 5px;
             outline: 1px rgb(6, 134, 74) solid;
-            height: fit-content;
+            height: 500px;
+            width: 100%;
+            margin:5px;
+            overflow: auto;
 
         }
 
@@ -61,21 +70,24 @@
 <body>
     <div id="mydiv">
         <div id="myDIV">
-            <h1 class="heading" id="h">Enter executable and valid javascript below and hit 'Execute' <br>
+            <h2 class="heading" id="h">Enter executable and valid javascript below and hit 'Execute' <br>
                 <b>note:</b>you are suppoesed to use semi-colon ie';' at the end of every line of code
-            </h1>
+            </h2>
         </div>
         <div id="myspancontainer" >
             <div contenteditable="true" id="editingplaygorund">
                 <p class="myP" autocapitalize="off" autocomplete="off" autocorrect="off" aria-autocomplete="both" aria-haspopup="false" spellcheck="false">//type your javascript below</p>
+                <p class="myP" autocapitalize="off" autocomplete="off" autocorrect="off" aria-autocomplete="both" aria-haspopup="false" spellcheck="false">function myfunction(){}</p>
+
             </div>
         </div>
 
         <button onclick="myFunk()">Execute</button>
     </div>
     <script>
+        var dis=window.innerHeight;
         function myFunk() {
-            var Code = document.getElementById('edit-innerhtml').innerText;
+            var Code = document.getElementById('editingplaygorund').innerText;
             setTimeout(Code, 1);
         }
     </script>
