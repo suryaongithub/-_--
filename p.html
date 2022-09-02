@@ -1,135 +1,84 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-        <style>
-            #bruh{
-                border-radius: 25px;
-                background-color: rgba(0, 255, 157, 0.281);
-                padding: 10px;
-                stroke: rgb(0, 255, 170);
-                padding: 5px;
-                margin: 5px;
-            }
-            .heading{
-                font-family: 'Oswald', sans-serif;
-                padding: 5px ;
-                margin: 5px;
-            }
 
-            #mydiv{
-                padding: 5px;
-                border-radius: 20px;
-                margin: 5px;
-                background-image: linear-gradient(135deg,rgba(255, 123, 0, 0.200),rgba(110, 0, 161, 0.200),rgba(0, 255, 136, 0.200));
-            }
-
-            button{
-                margin: 5px;
-                padding: 5px;
-                border-radius: 25px;
-                color: black;
-                background-color: aquamarine;
-            }
-            
-            #spanner
-            {
-            outline: none;
-            background-color:white;
-            border-radius: 3px;
-            }
-
-            pre{
-                
-            outline: none;
-            user-select:all;
-            background-color:white;
-            border-radius: 3px;
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <style>
+        #bruh {
+            border-radius: 25px;
+            background-color: rgba(0, 255, 157, 0.281);
             padding: 10px;
-            }
+            stroke: rgb(0, 255, 170);
+            padding: 5px;
+            margin: 5px;
+        }
 
-            #myDIV{
-  /* border: 5px outset red; */
-  /* background-image: linear-gradient(135deg,#d2f0268c 75% , #da44ab88 50%, #eadedb93 0%); */
-  background-image: linear-gradient(135deg, #eadedb93 0%, #da44ab88 50%, #d2f0268c 75%);
-  padding: 5px;
-  text-align: center;
-  align-items: center;
-  border-radius: 15px;
-  user-select: none;
-  /* width: 1000px;
-  height: 600px; */
+        .heading {
+            font-family: 'Oswald', sans-serif;
+            padding: 5px;
+            margin: 5px;
+        }
 
-  transition-property: all;
-  transition-duration: 2500ms;
+        #mydiv {
+            padding: 5px;
+            border-radius: 20px;
+            margin: 5px;
+            background-image: linear-gradient(135deg, rgba(255, 123, 0, 0.200), rgba(110, 0, 161, 0.200), rgba(0, 255, 136, 0.200));
+        }
 
-}
-        </style>
-        
-    </head>
-    <body>
-        <div id="mydiv">
-            <div id="myDIV">
-                <h1 class="heading" id="h">Enter executable and valid javascript below and hit 'Execute' <br>
-                    <b>note:</b>you are supposed to use semi-colon ie';' at the end of every line of code</h1>
-            </div>
-            <span contenteditable="true" id="spanner"></span>
-            <button onclick="myFunk()">Execute</button>
+        button {
+            margin: 5px;
+            padding: 5px;
+            border-radius: 25px;
+            color: black;
+            background-color: aquamarine;
+        }
+
+        .myP{
+            margin:2px;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        #editingplaygorund{
+            background-color: white;
+            padding: 1px;
+            border-radius: 5px;
+            outline: 1px rgb(6, 134, 74) solid;
+            height: fit-content;
+
+        }
+
+        [contenteditable]{
+            outline: 0px solid transparent;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="mydiv">
+        <div id="myDIV">
+            <h1 class="heading" id="h">Enter executable and valid javascript below and hit 'Execute' <br>
+                <b>note:</b>you are suppoesed to use semi-colon ie';' at the end of every line of code
+            </h1>
         </div>
-        <script>
-            const span = document.getElementById('spanner');
-            span.innerHTML=`
-<pre class='wut'>
+        <div id="myspancontainer" >
+            <div contenteditable="true" id="editingplaygorund">
+                <p class="myP" autocapitalize="off" autocomplete="off" autocorrect="off" aria-autocomplete="both" aria-haspopup="false" spellcheck="false">//type your javascript below</p>
+            </div>
+        </div>
 
+        <button onclick="myFunk()">Execute</button>
+    </div>
+    <script>
+        function myFunk() {
+            var Code = document.getElementById('edit-innerhtml').innerText;
+            setTimeout(Code, 1);
+        }
+    </script>
+</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</pre>
-`
-            
-            function myFunk()
-            {
-            //     console.log('hey')
-                var code = document.getElementsByClassName('wut');
-                var Code=" ";
-                for (let p = 0; p < code.length; p++) {
-                    Code = Code.concat(code[p].innerHTML);
-                    
-                }
-                setTimeout(Code,1);
-            }
-        </script>
-    </body>
 </html>
